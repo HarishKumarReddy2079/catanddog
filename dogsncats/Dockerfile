@@ -12,11 +12,11 @@ RUN apt-get update && apt-get install -y python3-pip
 #RUN pip install -r requirements.txt
 RUN python -m pip install -r requirements.txt
 # copy every content from the local file to the image
-EXPOSE 5000
+#EXPOSE 5000
 #EXPOSE 80
 #EXPOSE 8080
 
 # configure the container to run in an executed manner
 ENTRYPOINT [ "python3" ]
 
-CMD ["app.py" , "--bind", "0.0.0.0:5000"]
+CMD ["app.py"]
